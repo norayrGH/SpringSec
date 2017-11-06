@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="" method="post">
+    <p th:if="${loginError}" class="error">Wrong user or password</p>
+    <input type="text" name="username"/>
+    <br/>
+    <br/>
+    <input type="password" name="password"/>
+
+    <br/>
+    <hr/>
+
+    <input
+            type="hidden"
+            th:name="${_csrf.parameterName}"
+            th:value="${_csrf.token}" />
+    <button type="submit">Login !!!</button>
+</form>
+
+</body>
+</html>
